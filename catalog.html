@@ -85,8 +85,10 @@
                 fill="#C5C5C5" />
             </svg>
           </a>
-          <a class="profile-link profile-orders" href="">Мои заказы</a>
-          <a class="profile-link profile-login" href="">Личный кабинет</a>
+          <div class="profile-links">
+            <a class="profile-link profile-orders" href="">Мои заказы</a>
+            <a class="profile-link profile-login" href="">Личный кабинет</a>
+          </div>
         </div>
       </div>
 
@@ -385,7 +387,7 @@
   <footer class="footer-main">
     <section>
       <div class="container footer-navigation-grid">
-        <a class="main-logo" href="index.html">
+        <a class="main-logo" href="">
           <img class="main-logo-text" src="img/logo-technomart.png" alt="Логотип Техномарта" width="108" height="18">
         </a>
         <nav class="main-navigation">
@@ -399,7 +401,7 @@
         </nav>
       </div>
     </section>
-    <section class="footer-tooltypes-navigation">
+    <section>
       <div class="container footer-tooltypes-grid">
         <div class="footer-adress">
           <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
@@ -415,7 +417,7 @@
     </section>
     <section class="footer-links">
       <div class="container footer-links-grid">
-        <p>© 2010–2021 Компания «Техномарт» <br>
+        <p class="copyright">© 2010–2021 Компания «Техномарт» <br>
           Все права защищены</p>
         <ul class="social-links-list">
           <li class="">
@@ -453,16 +455,16 @@
                   d="M14 11H29C30.65 11 32 12.35 32 14V29C32 30.65 30.65 32 29 32H14C12.35 32 11 30.65 11 29V14C11 12.35 12.35 11 14 11ZM25 21.5C25 19.57 23.43 18 21.5 18C19.57 18 18 19.57 18 21.5C18 23.43 19.57 25 21.5 25C23.43 25 25 23.43 25 21.5ZM14 29V20H15.181C15.0626 20.4913 15.0019 20.9947 15 21.5C15 25.0899 17.9101 28 21.5 28C25.0899 28 28 25.0899 28 21.5C27.9986 20.9946 27.9379 20.4912 27.819 20H29V29H14ZM25 18H29V14H25V18Z"
                   fill="white" />
               </svg>
-
             </a>
           </li>
         </ul>
-        <p>
+        <p class="footer-contact footer-contact-mail">
           Обратная связь:
           <a class="contact-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
-        <p>
-          Разработано:
+        <p class="footer-contact footer-contact-developer">
+          Разработано &#8212;
+          <br>
           <a class="contact-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         </p>
       </div>
@@ -470,7 +472,7 @@
   </footer>
 
   <section class="modal modal-cart-notice">
-    <button class="modal-close" type="button"></button>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
     <p class="cart-notice">Товар добавлен в корзину!</p>
     <div class="cart-notice-buttons">
       <a class="button" href="catalog.html">Оформить заказ</a>
