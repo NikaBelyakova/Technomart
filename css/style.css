@@ -39,22 +39,46 @@
   --green-shadow: #367315;
 }
 
-@keyframes unfoldIn {
+@-webkit-keyframes unfoldIn {
   0% {
-    transform:scaleY(.005) scaleX(0);
+    -webkit-transform:scaleY(.005) scaleX(0);
+            transform:scaleY(.005) scaleX(0);
   }
   50% {
-    transform:scaleY(.005) scaleX(1);
+    -webkit-transform:scaleY(.005) scaleX(1);
+            transform:scaleY(.005) scaleX(1);
   }
   100% {
-    transform:scaleY(1) scaleX(1);
+    -webkit-transform:scaleY(1) scaleX(1);
+            transform:scaleY(1) scaleX(1);
   }
 }
 
+@keyframes unfoldIn {
+  0% {
+    -webkit-transform:scaleY(.005) scaleX(0);
+            transform:scaleY(.005) scaleX(0);
+  }
+  50% {
+    -webkit-transform:scaleY(.005) scaleX(1);
+            transform:scaleY(.005) scaleX(1);
+  }
+  100% {
+    -webkit-transform:scaleY(1) scaleX(1);
+            transform:scaleY(1) scaleX(1);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); transform: translateX(10px); }
+}
+
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-  20%, 40%, 60%, 80% { transform: translateX(10px); }
+  0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); transform: translateX(10px); }
 }
 
 .visually-hidden {
@@ -211,6 +235,19 @@ button {
   position: relative;
 }
 
+.header-top-left, .header-top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.header-top-left {
+  position: relative;
+}
+
 .header-middle-grid {
   display: -ms-grid;
   display: grid;
@@ -233,7 +270,7 @@ button {
   height: 48px;
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 0;
 }
 
 .main-logo:active .main-logo-text {
@@ -455,11 +492,12 @@ button {
   color: var(--blue-basic)
 }
 
+/* Кнопки Войти и Регистрация */
 .user-navigation {
   text-align: right;
+  margin-bottom: 10px;
 }
 
-/* Кнопки Войти и Регистрация */
 .button-login {
   font-size: 21px;
   line-height: 21px;
@@ -467,8 +505,6 @@ button {
   color: var(--black-basic);
   background-color: var(--white-basic);
   padding: 12px 24px;
-  margin-bottom: 10px;
-  margin-right: 10px;
   word-break: break-word;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
@@ -511,7 +547,7 @@ button {
   -ms-grid-column-align: right;
       justify-self: right;
   margin-bottom: 7px;
-  padding: 20px 12px;
+  padding: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,20 +560,23 @@ button {
   gap: 20px;
 }
 
-.profile-user:hover path {
-  fill: var(--blue-icons);
-}
-
-.profile-user:active path {
+.account-in:active path,
+.account-out:active path {
   fill: var(--grey-light);
 }
 
-.profile-user:active .profile-name {
+.account-in:active .profile-name {
   color: var(--grey-light);
+}
+
+.account-in:hover path,
+.account-out:hover path {
+  fill: var(--blue-icons);
 }
 
 .profile-user svg {
   overflow: visible;
+  vertical-align: middle;
 }
 
 .profile-name {
@@ -549,6 +588,8 @@ button {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
+  margin-left: 21px;
+  vertical-align: middle;
 }
 
 .profile-links {
@@ -917,13 +958,15 @@ button {
   border-left: 3px solid var(--white-basic);
   border-bottom: 3px solid var(--white-basic);
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
   cursor: pointer;
 }
 
 .slider-arrows-control .arrow-forward {
   -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+      transform: rotate(-135deg);
 }
 
 .slider-controls .current {
@@ -2111,16 +2154,21 @@ button {
 
 /* Показать попапы */
 .modal-show {
+  display: -ms-grid;
   display: grid;
 }
 
 .modal-show-animation {
-  animation-name: unfoldIn;
-  animation-duration: 0.8s;
+  -webkit-animation-name: unfoldIn;
+          animation-name: unfoldIn;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 /* Ошибка при заполнении формы */
 .modal-error {
-  animation-name: shake;
-  animation-duration: 0.8s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   }
