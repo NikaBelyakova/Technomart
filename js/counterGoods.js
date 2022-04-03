@@ -1,6 +1,9 @@
 const buttonsBuy = document.querySelectorAll('.button-buy');
 const buttonsBookmark = document.querySelectorAll('.button-bookmark');
 
+const modalCart = document.querySelector('.modal-cart-notice');
+const modalCartClose = modalCart.querySelector('.modal-close');
+
 const headerCart = document.querySelector('.main-header-cart');
 const cartCounter = headerCart.querySelector('.counter');
 
@@ -13,6 +16,8 @@ for (buttonBuy of buttonsBuy) {
   buttonBuy.onclick = function () {
     headerCart.style.backgroundColor = redBasic;
     +cartCounter.textContent++;
+    modalCart.classList.add('modal-show');
+    modalCart.classList.add('modal-show-animation');
   }
 };
 
@@ -21,4 +26,9 @@ for (buttonBookmark of buttonsBookmark) {
     headerBookmark.style.backgroundColor = redBasic;
     +bookmarkCounter.textContent++;
   }
+}
+
+modalCartClose.onclick = function () {
+  modalCart.classList.remove('modal-show');
+  modalCart.classList.remove('modal-show-animation');
 }

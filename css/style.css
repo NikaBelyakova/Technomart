@@ -2156,13 +2156,14 @@ button {
 .modal-show {
   display: -ms-grid;
   display: grid;
+  z-index: 3;
 }
 
 .modal-show-animation {
   -webkit-animation-name: unfoldIn;
           animation-name: unfoldIn;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
 /* Ошибка при заполнении формы */
