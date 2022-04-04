@@ -32,3 +32,13 @@ modalCartClose.onclick = function () {
   modalCart.classList.remove('modal-show');
   modalCart.classList.remove('modal-show-animation');
 }
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (modalCart.classList.contains("modal-show")) {
+      evt.preventDefault();
+      modalCart.classList.remove("modal-show");
+      modalCart.classList.remove('modal-show-animation');
+    }
+  }
+});

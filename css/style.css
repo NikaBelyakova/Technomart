@@ -973,6 +973,12 @@ button {
   background-color: var(--red-basic);
 }
 
+.arrow-forward:disabled,
+.arrow-backward:disabled {
+  border-left-color: var(--red-basic);
+  border-bottom-color: var(--red-basic);
+}
+
 /* Популяные товары */
 .popular-items {
   margin-bottom: 70px;

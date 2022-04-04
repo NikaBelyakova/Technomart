@@ -17,7 +17,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
@@ -74,7 +74,7 @@
         </div>
         <div class="user-navigation">
           <h2 class="visually-hidden">Личный кабинет</h2>
-          <button class="button-login" type="button">
+          <a href="#" class="button-login" type="button">
             <svg aria-hidden="true" focusable="false" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5" />
               <path
@@ -82,8 +82,8 @@
                 fill="#C5C5C5" />
             </svg>
             Войти
-          </button>
-          <button class="button-login" type="button">Регистрация</button>
+          </a>
+          <a href="#" class="button-login" type="button">Регистрация</a>
         </div>
       </div>
 
@@ -131,7 +131,7 @@
             </li>
           </ul>
           <div class="slider-arrows-control">
-            <button type="button" aria-label="Стрелка назад"></button>
+            <button class="arrow-backward" type="button" aria-label="Стрелка назад" disabled></button>
             <button class="arrow-forward" type="button" aria-label="Стрелка вперёд"></button>
           </div>
           <a class="button" href="catalog.html">открыть каталог</a>
@@ -433,10 +433,22 @@
       width="943" height="450" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
   </section>
+
+  <section class="modal modal-cart-notice">
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <p class="cart-notice">Товар добавлен в корзину!</p>
+    <div class="cart-notice-buttons">
+      <a class="button" href="catalog.html">Оформить заказ</a>
+      <a class="button button-continue" href="catalog.html">Продолжить покупки</a>
+    </div>
+  </section>
+
+
   <script src="js/contactUsPopup.min.js"></script>
   <script src="js/mapPopup.min.js"></script>
   <script src="js/counterGoods.min.js"></script>
   <script src="js/servicesTabs.min.js"></script>
+  <script src="js/sliderGoods.min.js"></script>
 </body>
 
 </html>
