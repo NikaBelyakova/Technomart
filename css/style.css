@@ -541,6 +541,10 @@ button {
       justify-self: end;
 }
 
+.profile.user-navigation {
+  margin-bottom: 0;
+}
+
 .profile-user {
   background-color: var(--white-basic);
   grid-column: 1 / -1;
